@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "BionicGPT",
+  "description": "Makes the first half of all words on a page bold.",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["main.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["<all_urls>"]
+}
